@@ -1,26 +1,33 @@
 console.log("Hey!");
 
-game();
+//////////////////
+//GAME MECHANICS//
+//////////////////
+
+//game();
 
 /////////////////////////////////////////
 
-function game()
-{
-    let winCounter = 0;
+//function game()
 
-    //plays 5 rounds of RPS
-    for (let i = 1; i <= 5; i++)
-    {
-        console.log(`Round ${i}!`);
-        let result = playRound(playerPlay(), computerPlay());
-        if (result.includes("You win!"))
-            winCounter++;
+// uncomment below to restore 5 round functionality
+// {
+//     let winCounter = 0;
+//
+//     //plays 5 rounds of RPS
+//     for (let i = 1; i <= 5; i++)
+//     {
+//         console.log(`Round ${i}!`);
+//         let result = playRound(playerPlay(), computerPlay());
+//         if (result.includes("You win!"))
+//             winCounter++;
+//
+//         console.log(result);
+//     }
+//
+//     console.log(`You won ${winCounter} of 5 rounds!`);
+// }
 
-        console.log(result);
-    }
-
-    console.log(`You won ${winCounter} of 5 rounds!`);
-}
 
 function computerPlay() 
 {
@@ -88,3 +95,22 @@ function numToRPS(number)
     //console.log(RPS);
     return RPS;
 }
+
+
+/////////////////////
+//JS IMPLEMENTATION//
+/////////////////////
+
+const gameButtons = document.querySelectorAll("[data-choice]");
+
+console.log(gameButtons);
+
+//every button click plays a round
+gameButtons.forEach(gB => {
+    gB.addEventListener('click', e => {
+        const choice = gB.dataset.choice;
+        let result = playRound(choice, computerPlay());
+        console.log(result);
+    });
+});
+
