@@ -66,6 +66,7 @@ body {
 	border: none;
 	padding: 0 20px;
 	border-radius: 100%;
+	font-size
 }
 
 .rps-button:hover {
@@ -118,3 +119,11 @@ body {
 
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 800px) {
+	.rps-button {
+		font-size: 200px;
+	}
+	.scoreCard > * {
+		font-size: 84px;
+	}
+}
