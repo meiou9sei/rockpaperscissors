@@ -15,7 +15,7 @@ TODO:
         - have buttons flex-shrink for smaller sizes
             - but max width for widescreen, centered
             - also get rid of button, just have emoji
-        -         
+        - have game buttons shrink properly. maybe use css grid?
 
     Reference: 
     - javascript-intro and 30min3ezpzprojs
