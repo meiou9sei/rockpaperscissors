@@ -53,8 +53,28 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.game-container {
+	margin: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
 .rps-button {
-	font-size: 10rem;
+	font-size: 25vw;
+	background-color: lightseagreen;
+	border: none;
+	padding: 0 20px;
+	border-radius: 100%;
+}
+
+.rps-button:hover {
+	cursor: pointer;
+}
+
+.rps-button:active {
+	font-size: 20vw;
+	margin: 2.5vw;
 }
 
 /* MATCH HISTORY */
@@ -62,30 +82,39 @@ body {
 .scoreCard {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+	max-width: 960px;
+	margin: auto;
 }
 
-.scoreCard {
+.scoreCard > * {
+	width: 90%;
+	height: 75px;
+	margin: 10px;
 	padding: 10px;
-}
-
-.scoreCard:nth-child(odd) {
-	background-color: coral;
-}
-
-.scoreCard:nth-child(even) {
-	background-color: orange;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	font-size: 10vw;
 }
 
 .winner {
-	font-size: 5rem;
+	background-color: limegreen;
+
 }
 
 .tie {
-	font-size: 3rem;
-	opacity: 75%;
+	opacity: 50%;
+	background-color: darkorange;
 }
 
 .loser { 
-	font-size: 3rem;
 	opacity: 50%;
+	background-color: tomato;
 }
+
+
+/* MEDIA QUERIES */

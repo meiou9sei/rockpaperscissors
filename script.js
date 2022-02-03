@@ -11,8 +11,11 @@ pseudocode
 /*
 TODO:
     - record score 
-    - create match history (and creating divs for that)
     - create CSS
+        - have buttons flex-shrink for smaller sizes
+            - but max width for widescreen, centered
+            - also get rid of button, just have emoji
+        -         
 
     Reference: 
     - javascript-intro and 30min3ezpzprojs
@@ -39,7 +42,7 @@ const RPS = [
     }
 ];
 
-// makes RPS buttons selectable
+// make RPS buttons selectable
 const choices = document.querySelectorAll("[data-choice]");
 
 choices.forEach(choice => {
@@ -47,6 +50,16 @@ choices.forEach(choice => {
         console.log(choice.dataset.choice);
         game(choice.dataset.choice, computerChoice());
     });
+});
+
+// make clear match history functional
+const matchHistoryContainer = document.querySelector("#match-history");
+
+const clearMatchHistory = document.querySelector('#clear-match-history');
+
+//clears match history
+clearMatchHistory.addEventListener('click', function() {
+    matchHistoryContainer.innerHTML = "";
 });
 
 
@@ -90,7 +103,6 @@ function scoreKeeper() {
 // for matchHistory, pass in winner/loser (classes) for userResult/pcResult
 function matchHistory(userResult, pcResult, userChoice, pcChoice) {
     //select container
-    const matchHistoryContainer = document.querySelector("#match-history");
     // each card of match history
     const scoreCard = document.createElement('div');
     scoreCard.classList.add('scoreCard');
