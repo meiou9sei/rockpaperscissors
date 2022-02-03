@@ -56,3 +56,36 @@ body {
 .rps-button {
 	font-size: 10rem;
 }
+
+/* MATCH HISTORY */
+.match-history-sub-container,
+.scoreCard {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.scoreCard {
+	padding: 10px;
+}
+
+.scoreCard:nth-child(odd) {
+	background-color: coral;
+}
+
+.scoreCard:nth-child(even) {
+	background-color: orange;
+}
+
+.winner {
+	font-size: 5rem;
+}
+
+.tie {
+	font-size: 3rem;
+	opacity: 75%;
+}
+
+.loser { 
+	font-size: 3rem;
+	opacity: 50%;
+}
