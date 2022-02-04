@@ -10,16 +10,13 @@ pseudocode
 
 /*
 TODO:
-    - record score 
-
-
-    ***redo css from ground up. start with containers layout, then add basic colors and stuff***
-    - create CSS
-        - last game is bigger than rest (small)
-        - have buttons flex-shrink for smaller sizes
-            - but max width for widescreen, centered
-            - also get rid of button, just have emoji
-        - have game buttons shrink properly. maybe use css grid?
+- CSS 
+- dark blue w/ yellow text. Green = win, orange = tie, red = loss
+- Title at top big, credit underneath
+- emojis have light yellow containers? that become deep yellow when clicked on. emoji shakes when clicked
+- button no border, rounded, one color (maybe yellow)
+- latest match history is big, rest are smaller
+- media query: make buttons shrink rather than flex down to next row
 
     Reference: 
     - javascript-intro and 30min3ezpzprojs
