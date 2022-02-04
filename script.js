@@ -46,9 +46,20 @@ const RPS = [
     }
 ];
 
-// make RPS buttons selectable
+let score = {
+    wins : 0,
+    ties : 0,
+    losses : 0
+}
+//query selectors
+const matchHistoryContainer = document.querySelector("#match-history");
+const clearMatchHistory = document.querySelector('#clear-match-history');
+const userWins = document.querySelector("#user-wins");
+const ties = document.querySelector("#ties");
+const computerWins = document.querySelector("#computer-wins");
 const choices = document.querySelectorAll("[data-choice]");
 
+// make RPS buttons selectable
 choices.forEach(choice => {
     choice.addEventListener('click', (e)=>{
         console.log(choice.dataset.choice);
@@ -56,14 +67,13 @@ choices.forEach(choice => {
     });
 });
 
-// make clear match history functional
-const matchHistoryContainer = document.querySelector("#match-history");
-
-const clearMatchHistory = document.querySelector('#clear-match-history');
 
 //clears match history
 clearMatchHistory.addEventListener('click', function() {
     matchHistoryContainer.innerHTML = "";
+    userWins.textContent = "User wins: ";
+    ties.textContent = "Ties: ";
+    computerWins.textContent = "Computer wins: ";
 });
 
 
@@ -76,15 +86,18 @@ function game(userChoice, pcChoice) {
     if (userHand.win === pcChoice) {
         console.log("win");
         matchHistory("winner", "loser", userChoice, pcChoice);
+        scoreKeeper("user");
     }
 
     else if (userHand.tie === pcChoice) {
         console.log("tie");
         matchHistory("tie", "tie", userChoice, pcChoice);
+        scoreKeeper("tie");
     }
     else if (userHand.loss === pcChoice) {
         console.log("lost");
         matchHistory("loser", "winner", userChoice, pcChoice);
+        scoreKeeper("computer");
     }
 
 }
@@ -97,9 +110,23 @@ function computerChoice() {
 
 
 // SCORE KEEPER
-function scoreKeeper() {
-    const scoreContainer = document.querySelector("#score-container");
-    
+function scoreKeeper(winner) {
+    switch (winner) {
+        case "user":
+            score.wins++;
+            break;
+        case "tie":
+            score.ties++;
+            break;
+        case "computer":
+            score.losses++;
+            break;
+    }
+
+    // text
+    userWins.textContent = `User wins: ${score.wins}`;
+    ties.textContent = `Ties: ${score.ties}`;
+    computerWins.textContent = `Computer wins: ${score.losses}`;
 }
 
 // MATCH HISTORY
