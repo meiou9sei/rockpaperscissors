@@ -71,9 +71,12 @@ choices.forEach(choice => {
 //clears match history
 clearMatchHistory.addEventListener('click', function() {
     matchHistoryContainer.innerHTML = "";
-    userWins.textContent = "User wins: ";
-    ties.textContent = "Ties: ";
-    computerWins.textContent = "Computer wins: ";
+    userWins.textContent = "User wins: 0";
+    score.wins = 0;
+    ties.textContent = "Ties: 0";
+    score.ties = 0;
+    computerWins.textContent = "Computer wins: 0";
+    score.losses = 0;
 });
 
 
