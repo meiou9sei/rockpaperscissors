@@ -77,6 +77,12 @@ body {
 	margin: 2.5vw;
 }
 
+/* SCORE */
+.score-container {
+	display: flex;
+	justify-content: space-around;
+}
+
 /* MATCH HISTORY */
 .match-history-sub-container,
 .scoreCard {

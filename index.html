@@ -18,11 +18,17 @@
         <button class="rps-button" data-choice="✂">✂</button>
     </div>
 
-    <div class="sub-container" id="score-container"></div>
+    <div class="sub-container">
+        <div class="score-container">
+            <p>User wins: </p>
+            <p>Ties: </p>
+            <p>Computer wins: </p>
+        </div>
+        <button id="clear-match-history">Reset Game</button>
+    </div>
     
     <div class="sub-container" id="match-history-container">
         <h2 class="container-title">Match History:</h2>
-        <button id="clear-match-history">Clear Match History</button>
         <div class="match-history-sub-container">
             <p class="container-subtitle" id="user-match-history">User</p>
             <p class="container-subtitle" id="pc-match-history">pc</p>

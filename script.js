@@ -11,7 +11,11 @@ pseudocode
 /*
 TODO:
     - record score 
+
+
+    ***redo css from ground up. start with containers layout, then add basic colors and stuff***
     - create CSS
+        - last game is bigger than rest (small)
         - have buttons flex-shrink for smaller sizes
             - but max width for widescreen, centered
             - also get rid of button, just have emoji
@@ -94,7 +98,6 @@ function computerChoice() {
 
 // SCORE KEEPER
 function scoreKeeper() {
-    //
     const scoreContainer = document.querySelector("#score-container");
     
 }
