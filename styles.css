@@ -47,10 +47,99 @@ table {
 	border-spacing: 0;
 }
 
-/* FONT */
+/***************/
+/* CSS RESET ^ */
+/***************/
 
+/*****************/
+/* COLOR PALETTE */
+/*****************/
+
+/*
+	DARK - #331832
+	MAIN-DARK - #D81E5B
+	MAIN - F0544F
+	LIGHT-DARK - C6D8D3
+	LIGHT - FDF0D5
+*/
+
+/********/
+/* FONT */
+/********/
 body {
     font-family: Arial, Helvetica, sans-serif;
+	background-color: #331832;
+}
+
+h1 {
+	font-size: 80px;
+	color: #f0544f;
+}
+
+h2 {
+	font-size: 48px;
+	color: #d81e5b;
+}
+
+p {
+	color: #fdf0d5;
+	font-size: 16px;
+}
+
+a {
+	color: #f0544f;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #d81e5b;
+}
+
+.red-text {
+	color: #d81e5b;
+}
+
+button {
+	background-color: #d81e5b;
+	border: none;
+	color: #fdf0d5;
+	padding: 10px;
+	border-radius: 5px;
+	width: 50%;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+/**************/
+/* CONTAINERS */
+/**************/
+
+.meta-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 75vw;
+	margin: auto;
+}
+
+.hero-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin: 25px;
+	gap: 15px;
+
+	text-align: center;
+
+}
+
+.rules-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;	
 }
 
 .game-container {
@@ -58,22 +147,37 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	width: 80%;
+
+	background-color: #d81e5b;
+	padding: 25px;
+	border-radius: 25px;
+}
+
+.sub-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	align-items: center;
+	margin: 15px;
+	width: 100%;
 }
 
 .rps-button {
-	font-size: 20vh;
-	background-color: lightseagreen;
+	font-size: 144px;
+	color: black;
+	background-color: #f0544f;
 	border: none;
-	padding: 0 20px;
 	border-radius: 100%;
+	width: 30%;
+	max-width: 250px;
 }
 
 .rps-button:hover {
-	cursor: pointer;
-}
-
-.rps-button:focus {
 	animation: shake 0.5s;
+	animation-iteration-count: infinite;
+	cursor: pointer;
+	background-color: #fdf0d5;
 }
 /* from https://www.w3schools.com/howto/howto_css_shake_image.asp */
 @keyframes shake {
@@ -91,25 +195,35 @@ body {
   }
 
   /* SCORE */
-.score-container {
+.score-container,
+.match-history-container {
 	display: flex;
 	justify-content: space-around;
+	gap: 25px;
 }
 
 /* MATCH HISTORY */
-.match-history-sub-container,
+#match-history {
+	width: 100%;
+}
+
 .scoreCard {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
-	justify-items: center;
 	max-width: 960px;
 	margin: auto;
 }
 
+.match-history-sub-text {
+	display: flex;
+	justify-content: space-around;
+	width: 100%
+}
+
 .scoreCard > * {
 	width: 90%;
-	height: 75px;
+	height: 100px;
 	margin: 10px;
 	padding: 10px;
 	text-align: center;
@@ -117,7 +231,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	border-radius: 15px;
-	font-size: 10vw;
+	font-size: 75px;
 }
 
 .winner {
@@ -133,4 +247,16 @@ body {
 .loser { 
 	opacity: 50%;
 	background-color: tomato;
+}
+
+@media only screen and (max-width: 900px) {
+	h1 {
+		font-size: 60px;
+	}
+	h2 {
+		font-size: 36px;
+	}
+	.rps-button {
+		font-size: 48px;
+	}
 }

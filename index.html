@@ -9,35 +9,43 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 id="hero">Rock Paper Scissors</h1>
-    <p id="hero-subtext">Rock paper scissors created by <a href="http://github.com/meiousei9">meiousei9</a> following <a href="http://theodinproject.com">The Odin Project</a> curriculum</p>
-    
-    <div class="game-container">
-        <button class="rps-button" data-choice="🗿">🗿</button>
-        <button class="rps-button" data-choice="📄">📄</button>
-        <button class="rps-button" data-choice="✂">✂</button>
-    </div>
+    <div class="meta-container">
 
-    <div class="sub-container">
-        <div class="score-container">
-            <p id="user-wins">User wins: 0</p>
-            <p id="ties">Ties: 0</p>
-            <p id="computer-wins">Computer wins: 0</p>
+        <div class="hero-container">
+            <h1 id="hero">Rock Paper Scissors</h1>
+            <p id="hero-subtext">Rock paper scissors created by <a href="http://github.com/meiousei9">meiousei9</a> following <a href="http://theodinproject.com">The Odin Project</a> curriculum</p>
+            <div class="rules-container red-text">
+                <p><i>"You know the rules and so do I"</i></p>
+                <p>- Rick Astley</p>
+            </div>
+                
         </div>
-        <button id="clear-match-history">Reset Game</button>
-    </div>
-    
-    <div class="sub-container" id="match-history-container">
-        <h2 class="container-title">Match History:</h2>
-        <div class="match-history-sub-container">
-            <p class="container-subtitle" id="user-match-history">User</p>
-            <p class="container-subtitle" id="pc-match-history">pc</p>
+        
+        <div class="game-container">
+            <button class="rps-button" data-choice="🗿">🗿</button>
+            <button class="rps-button" data-choice="📄">📄</button>
+            <button class="rps-button" data-choice="✂">✂</button>
         </div>
-        <div id="match-history"></div>
-    </div>
 
+        <div class="sub-container" id="current-score-cnotainer">
+            <h2 class="score-title">Current Score</h2>
+            <div class="score-container">
+                <p id="user-wins">User wins: 0</p>
+                <p id="ties">Ties: 0</p>
+                <p id="computer-wins">Computer wins: 0</p>
+            </div>
+            <button id="clear-match-history">Reset Game</button>
+        </div>
+        
+        <div class="sub-container" id="match-history-container">
+            <h2 class="container-title">Match History:</h2>
+            <div class="match-history-sub-text">
+                <p class="container-subtitle" id="user-match-history">User</p>
+                <p class="container-subtitle" id="pc-match-history">PC</p>
+            </div>
+            <div id="match-history"></div>
+        </div>
 
-
-    
+    </div>   
 </body>
 </html>
