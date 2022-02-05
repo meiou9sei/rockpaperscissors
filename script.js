@@ -10,13 +10,9 @@ pseudocode
 
 /*
 TODO:
-- CSS 
-- dark blue w/ yellow text. Green = win, orange = tie, red = loss
-- Title at top big, credit underneath
-- emojis have light yellow containers? that become deep yellow when clicked on. emoji shakes when clicked
-- button no border, rounded, one color (maybe yellow)
+- CSS
+- make everything smaller so top of match history fits on screen
 - latest match history is big, rest are smaller
-- media query: make buttons shrink rather than flex down to next row
 
     Reference: 
     - javascript-intro and 30min3ezpzprojs
