@@ -95,8 +95,13 @@ a:hover {
 	color: #d81e5b;
 }
 
-.red-text {
-	color: #d81e5b;
+.rules-container i {
+	font-size: 20px;
+	font-style: italic;
+}
+
+.score-container > p {
+	font-size: 24px;
 }
 
 button {
@@ -105,7 +110,7 @@ button {
 	color: #fdf0d5;
 	padding: 10px;
 	border-radius: 5px;
-	width: 50%;
+	width: 20%;
 }
 
 button:hover{
@@ -122,6 +127,8 @@ button:hover{
 	align-items: center;
 	width: 75vw;
 	margin: auto;
+	margin-top: 25px;
+	gap: 25px;
 }
 
 .hero-container {
@@ -129,7 +136,6 @@ button:hover{
 	flex-direction: column;
 	align-items: center;
 
-	margin: 25px;
 	gap: 15px;
 
 	text-align: center;
@@ -139,15 +145,15 @@ button:hover{
 .rules-container {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;	
+	align-items: flex-end;
+	gap: 5px;	
 }
 
 .game-container {
-	margin: 25px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	width: 80%;
+	width: 55%;
 
 	background-color: #d81e5b;
 	padding: 25px;
@@ -159,17 +165,16 @@ button:hover{
 	flex-direction: column;
 	gap: 15px;
 	align-items: center;
-	margin: 15px;
 	width: 100%;
 }
 
 .rps-button {
-	font-size: 144px;
+	font-size: 106px;
 	color: black;
 	background-color: #f0544f;
 	border: none;
 	border-radius: 100%;
-	width: 30%;
+	width: 25%;
 	max-width: 250px;
 }
 
@@ -202,17 +207,42 @@ button:hover{
 	gap: 25px;
 }
 
+#user-wins {
+	color: limegreen;
+}
+
+#ties {
+	color: darkorange;
+}
+
+#computer-wins {
+	color: #D81E5B;
+}
+
 /* MATCH HISTORY */
 #match-history {
 	width: 100%;
 }
 
+#match-history > :first-child {
+	max-width: 100%;
+}
+
 .scoreCard {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	align-items: center;
-	max-width: 960px;
 	margin: auto;
+	justify-items: center;
+}
+
+#match-history > :first-child > * {
+	max-width: 100%;
+	font-size: 100px;
+	height: 125px;
+}
+
+.scoreCard > * {
+	max-width: 75%;
 }
 
 .match-history-sub-text {
@@ -246,17 +276,34 @@ button:hover{
 
 .loser { 
 	opacity: 50%;
-	background-color: tomato;
+	background-color: #D81E5B;
 }
 
 @media only screen and (max-width: 900px) {
 	h1 {
-		font-size: 60px;
-	}
-	h2 {
 		font-size: 36px;
 	}
+	h2 {
+		font-size: 24px;
+	}
 	.rps-button {
+		font-size: 48px;
+		width: 30%;
+	}
+
+	button {
+		width: 50%;
+	}
+
+	.score-container > p {
+		font-size: 16px;
+	}
+
+	#match-history > :first-child > * {
+		font-size: 56px;
+	}
+
+	.scoreCard > * {
 		font-size: 48px;
 	}
 }
