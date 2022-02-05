@@ -174,7 +174,7 @@ button:hover{
 	background-color: #f0544f;
 	border: none;
 	border-radius: 100%;
-	width: 25%;
+	width: 30%;
 	max-width: 250px;
 }
 
@@ -279,7 +279,7 @@ button:hover{
 	background-color: #D81E5B;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
 	h1 {
 		font-size: 36px;
 	}
@@ -288,7 +288,8 @@ button:hover{
 	}
 	.rps-button {
 		font-size: 48px;
-		width: 30%;
+		background-color: #d81e5b;
+		border-radius: 10px;
 	}
 
 	button {
@@ -297,6 +298,7 @@ button:hover{
 
 	.score-container > p {
 		font-size: 16px;
+		text-align: center;
 	}
 
 	#match-history > :first-child > * {
@@ -305,5 +307,6 @@ button:hover{
 
 	.scoreCard > * {
 		font-size: 48px;
+		padding: 0;
 	}
 }
